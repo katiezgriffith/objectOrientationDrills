@@ -158,6 +158,15 @@ console.log(totalPopulation(populations));
 
 //Code Here
 
+function ingredients( obj ){
+
+let { carb, fat, protein} = obj;
+
+return [carb,fat,protein];
+
+}
+
+
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
@@ -178,6 +187,9 @@ var user = {
   Make that change without modifying the original object code above.
 */
 
+user.name = 'Bryan G. Smith'
+user.email = 'bryan.smith@devmounta.in'
+
 //Code Here
 
 
@@ -187,7 +199,7 @@ var user = {
 */
 
 //Code Here
-
+delete user.age
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -195,8 +207,21 @@ var user = {
   Outside of your class, create an instance of your cat, passing in whatever values you would like.
   Print the name of your cat instance using dot notation.
 */
+// Code here
+class Cat {
+  constructor(name, age, color){
+    this.name = name;
+    this.age =  age;
+    this.color = color;
 
-//Code here
+  }
+
+  }
+
+  let Suzie = new Cat ("Suzie", 9 , "Calico")
+    console.log(Suzie.name)
+  
+
 
 
 
@@ -210,6 +235,19 @@ var user = {
 
 //Code here
 
+class Wizard {
+  constructor(name, age, favoriteSpell){
+    this.name = name,
+    this.age = age,
+    this.favoriteSpell= favoriteSpell
+  }
+  castspell(){
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  }
+}
+let Harry = new Wizard ("Harry", 12, "Aloh Hamora")
+
+Harry.castspell() 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
     Write a class called Phone. We'll use it as if we were creating
@@ -235,6 +273,33 @@ var user = {
 
 //Code Here
 
+class Phone {
+  constructor(brand, model, storage, color, price, sold=false) {
+    this.brand = brand,
+    this.model = model,
+    this.storage = storage,
+    this.color = color,
+    this.price = price,
+    this.sold = sold
+  }
+  sell(){
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold!`);}
+
+    changePrice(newPrice){
+    this.price = newPrice
+  }
+      
+    }
+
+
+
+  
+    
+  
+
+
+
   
 /*
     Next make three new phone instances using your class.
@@ -245,6 +310,10 @@ var user = {
     - color: string
     - price: number
 */
+let phone1 = new Phone ("Apple", "Iphone", 256, "Red", 1100);
+let phone2 = new Phone ("Samsung", "S20", 256, "Black", 800);
+let phone3 = new Phone ("Samsung", "S21", 256, "Yellow", 900 );
+
 
 //Code Here
 
@@ -256,7 +325,9 @@ var user = {
 */ 
 
 //Code Here 
+phone3.changePrice(1100)
 
+console.log(phone3.price)
 
 /*
   Now call the sell method on one of your other phone objects
@@ -265,6 +336,10 @@ var user = {
 */
 
 //Code Here 
+phone2.sell()
+
+console.log(phone2.sold)
+
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
