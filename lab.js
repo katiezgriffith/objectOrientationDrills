@@ -356,11 +356,15 @@ const colors = {
   highlight: 'blue',
   text: 'yellow'
 }
+
+
 //do not edit this object
 
 //Code Here 
 
+let colorsCopy = { ...colors};
 
+console.log(colorsCopy)
 
 /*
  Now use the spread operator to combine the following 2 objects into one. 
@@ -387,6 +391,9 @@ const shippingInfo = {
 //do not edit the objects above
 
 //Code Here
+let helensInfo = { ... contactInfo, ...shippingInfo}
+
+console.log(helensInfo)
 
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
@@ -405,7 +412,21 @@ const shippingInfo = {
 */
 
 //Code Here 
+class Vehicle {
+  constructor(capacity, color, mileage) {
+    this.capacity = capacity
+    this.color = color
+    this.mileage = mileage
+  }
+move(miles) {
+  this.mileage = this.mileage + miles;
 
+  console.log(this.mileage)
+
+
+
+}
+}
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
@@ -424,6 +445,7 @@ const shippingInfo = {
 */
 
 //Code Here
+
 
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
