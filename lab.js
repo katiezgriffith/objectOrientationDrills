@@ -449,22 +449,37 @@ let myFirstVehicle = new Vehicle (5, "Pink", 120000)
 //Code Here
 
 class Motorcyle extends Vehicle {
-  constructor (capacity, color, mileage,make, isCool)
-  super = { make, isCool}
+  constructor (capacity, color, mileage, make, isCool){
+    super (make, isCool)
+  this.capacity = capacity,
+  this.color = color,
+  this.mileage = mileage,
+  this.make = make,
+  this.isCool= isCool;
+}
 
-  this.name = 'Motorcycle'
+
+  
 
 }
-/*
+
+
+ 
+  /*
+
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
 //Code Here 
+let myFirstMotorcycle = new Motorcyle('2','Chrome',12000,'Harley Davidson', 'Yes')
 
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
+move(make); {
+  this.make = this.make + make;}
 
+  console.log(myFirstMotorcycle.make)
 /*
   Let's make another class based off of Vehicle. 
 
