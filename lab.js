@@ -434,7 +434,9 @@ move(miles) {
 
 //Code Here
 
+let myFirstVehicle = new Vehicle (5, "Pink", 120000)
 
+//console.log(myFirstVehicle.color) just testing
 /* 
   Now we'll create a class that's based off of the vehicle class. 
 
@@ -446,7 +448,13 @@ move(miles) {
 
 //Code Here
 
+class Motorcyle extends Vehicle {
+  constructor (capacity, color, mileage,make, isCool)
+  super = { make, isCool}
 
+  this.name = 'Motorcycle'
+
+}
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
